@@ -3,10 +3,40 @@
 
 import Link from "next/link";
 
+import { 
+    Avatar, 
+    AvatarFallback 
+} from "@/components/ui/avatar";
+import { AvatarImage } from "@radix-ui/react-avatar";
+
 const links = [
     { name: "accordion", href: "accordion" },
     { name: "alert", href: "alert" },
-];
+    { name: "button", href: "button" },
+    { name: "alert dialog", href: "alert-dialog" },
+    { name: "dialog", href: "dialog" },
+    { name: "badge", href: "badge" },
+    { name: "calendar", href: "calendar" },
+    { name: "avatar", href: "avatar" },
+    { name: "card", href: "card" },
+    { name: "carousel", href: "carousel" },
+    { name: "checkbox", href: "checkbox" },
+    { name: "command", href: "command" },
+    { name: "combobox", href: "combobox" },
+    { name: "contex menu", href: "contex-menu" },
+    { name: "menubar", href: "menubar" },
+    { name: "input OTP", href: "input-OTP" },
+    { name: "progress", href: "progress" },
+    { name: "sheet", href: "sheet" },
+    { name: "skeleton", href: "skeleton" },
+    { name: "slider", href: "slider" },
+    { name: "sonner", href: "sonner" },
+    { name: "toast", href: "toast" },
+    { name: "tabs", href: "tabs" },
+    { name: "chart", href: "chart" },
+    { name: "breadcrumb", href: "breadcrumb" },
+].sort((a, b) => a.name.localeCompare(b.name));
+
 
 export default function DashboardLayout({
     children,
@@ -94,9 +124,15 @@ export default function DashboardLayout({
                         </div>
                         <div className="flex items-center">
                             {/* User Avatar */}
-                            <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                                FH
-                            </div>
+                            <Avatar>
+                                <AvatarImage
+                                    src="https://github.com/shadcn.png"
+                                    alt="@shadcn"
+                                    title="@shadcn" />
+                                <AvatarFallback>CN</AvatarFallback>
+                            </Avatar>
+                            {/* <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -144,7 +180,7 @@ export default function DashboardLayout({
                             </div>
                         </div>
                     </main>
-                    <footer className="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
+                    <footer className="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4 print:hidden">
                         <ul className="flex items-center flex-wrap mb-6 md:mb-0">
                             <li>
                                 <a
@@ -256,7 +292,7 @@ export default function DashboardLayout({
                             </a>
                         </div>
                     </footer>
-                    <p className="text-center text-sm text-gray-500 my-10">
+                    <p className="text-center text-sm text-gray-500 my-10 print:hidden">
                         &copy; 2019-{new Date().getFullYear()}{" "}
                         <a href="#" className="hover:underline" target="_blank">
                             Themesberg
