@@ -23,6 +23,8 @@ const badgeVariants = cva(
           "text-green-800 bg-green-200 border border-green-800",
         warning:
           "text-yellow-800 bg-yellow-200 border border-yellow-800",
+        alert:
+          "text-red-800 bg-red-200 border border-red-800",
       },
     },
     defaultVariants: {
