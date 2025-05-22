@@ -39,7 +39,7 @@ export default function DialogPage() {
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
-              Link
+              Link { copied }
             </Label>
             <Input
               onChange={ () => setCopied(true) }

@@ -13,7 +13,6 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { TabsContent } from '@/components/ui/tabs'
 
 
 export const Tab2 = () => {
@@ -22,7 +21,7 @@ export const Tab2 = () => {
             <CardHeader>
                 <CardTitle>Password</CardTitle>
                 <CardDescription>
-                    Change your password here. After saving, you'll be logged out.
+                    Change your password here. After saving, you&apos;ll be logged out.
                 </CardDescription>
             </CardHeader>
             <CardContent className="space-y-2">
